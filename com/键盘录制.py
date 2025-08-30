@@ -289,9 +289,9 @@ def transfer_old_json(input,output):
             json.dump(recorder.transform_data(data), f, indent=2)
 
 if __name__ == "__main__":
-    # transfer_old_json("./哥布林巢穴.json","jl2.json")
-    recorder = InputRecorder()
-    recorder.start()
-    time.sleep(10000)
+    transfer_old_json("./哥布林巢穴.json","jl2.json")
+    # recorder = InputRecorder()
+    # recorder.start()
+    # time.sleep(10000)
 
 
