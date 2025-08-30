@@ -8,3 +8,9 @@
 ## 脚本使用方法
 1. 人物站在对应的副本圈上，显示F按键
 2. 使用start.ps1启动脚本，按控制台提示输入对应数字即可
+## 交流群
+QQ：975901806
+
+
+ ## 若脚本有帮到您，可以稍微给点打赏哦
+ <img width="664" height="786" alt="image" src="https://github.com/user-attachments/assets/0d570a16-2d7b-4b6a-8b47-00f75245dcf3" />
