@@ -1,49 +1,49 @@
-# ¶¨ÒåÐéÄâ»·¾³Ãû³Æ
+# ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â»·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 $venvName = "venv"
 
-# ¼ì²é Python ÊÇ·ñ°²×°
+# ï¿½ï¿½ï¿½ Python ï¿½Ç·ï¿½×°
 try {
     python --version 2>&1 | Out-Null
 } catch {
-    Write-Error "Î´ÕÒµ½ Python »·¾³£¬ÇëÏÈ°²×° Python ²¢Ìí¼Óµ½ÏµÍ³ PATH"
+    Write-Error "Î´ï¿½Òµï¿½ Python ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È°ï¿½×° Python ï¿½ï¿½ï¿½ï¿½Óµï¿½ÏµÍ³ PATH"
     pause
     exit 1
 }
 
-# ¼ì²é requirements.txt ÊÇ·ñ´æÔÚ
+# ï¿½ï¿½ï¿½ requirements.txt ï¿½Ç·ï¿½ï¿½ï¿½ï¿½
 if (-not (Test-Path "requirements.txt")) {
-    Write-Error "µ±Ç°Ä¿Â¼Î´ÕÒµ½ requirements.txt ÎÄ¼þ"
+    Write-Error "ï¿½ï¿½Ç°Ä¿Â¼Î´ï¿½Òµï¿½ requirements.txt ï¿½Ä¼ï¿½"
     pause
     exit 1
 }
 
-# ´´½¨ÐéÄâ»·¾³
-Write-Host "ÕýÔÚ´´½¨ÐéÄâ»·¾³ $venvName..."
+# ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â»·ï¿½ï¿½
+Write-Host "ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â»·ï¿½ï¿½ $venvName..."
 python -m venv $venvName
 
 if (-not (Test-Path "$venvName\Scripts\Activate.ps1")) {
-    Write-Error "ÐéÄâ»·¾³´´½¨Ê§°Ü"
+    Write-Error "ï¿½ï¿½ï¿½â»·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½"
     pause
     exit 1
 }
 
-# ¼¤»îÐéÄâ»·¾³²¢°²×°ÒÀÀµ
-Write-Host "ÕýÔÚ°²×°ÒÀÀµ°ü..."
+# ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â»·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½
+Write-Host "ï¿½ï¿½ï¿½Ú°ï¿½×°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½..."
 & "$venvName\Scripts\Activate.ps1"
 
-# °²×°ÒÀÀµ
+# ï¿½ï¿½×°ï¿½ï¿½ï¿½ï¿½
 pip install -r requirements.txt
 
 if ($LASTEXITCODE -ne 0) {
-    Write-Error "ÒÀÀµ°ü°²×°Ê§°Ü"
+    Write-Error "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×°Ê§ï¿½ï¿½"
     pause
     exit 1
 }
 
-# ÍË³öÐéÄâ»·¾³
+# ï¿½Ë³ï¿½ï¿½ï¿½ï¿½â»·ï¿½ï¿½
 deactivate
 
-Write-Host "`n»·¾³ÅäÖÃÍê³É£¡"
-Write-Host "¼¤»îÐéÄâ»·¾³µÄÃüÁî£º.\\$venvName\Scripts\Activate.ps1"
+Write-Host "`nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É£ï¿½"
+Write-Host "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â»·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î£º.\\$venvName\Scripts\Activate.ps1"
 pause
     
