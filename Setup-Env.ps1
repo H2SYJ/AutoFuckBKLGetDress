@@ -32,7 +32,7 @@ Write-Host "正在安装依赖包..."
 & "$venvName\Scripts\Activate.ps1"
 
 # 安装依赖
-pip install -r requirements.txt
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
 
 if ($LASTEXITCODE -ne 0) {
     Write-Error "依赖包安装失败"
