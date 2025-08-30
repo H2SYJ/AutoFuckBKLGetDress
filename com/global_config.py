@@ -74,7 +74,7 @@ img_info_arr = [
     img_info(get_image_path("resource/img/trigger_fb.png"), click_func=None, status_change_to=2, check_when_status=[2]),
     img_info(get_image_path("resource/img/win.png"), click_func=None, status_change_to=0, check_when_status=[2],
              threshold=0.9),
-    img_info(get_image_path("resource/img/die.png"), click_func=None, status_change_to=5, check_when_status=[2, 5],
+    img_info(get_image_path("resource/img/die.png"), click_func=None, status_change_to=None, check_when_status=[2, 5],
              threshold=0.7),
     img_info(get_image_path("resource/img/esc.png"), click_func=press_esc,
              threshold=0.88),
