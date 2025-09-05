@@ -5,7 +5,7 @@ from pynput import mouse, keyboard
 from threading import Thread
 import os
 
-json_file_name = 'recording_1755429068.json'
+
 class InputRecorder:
     def __init__(self):
         self.pressed_map = {}
@@ -24,14 +24,11 @@ class InputRecorder:
 
         # 热键定义
         self.toggle_record_key = keyboard.Key.f12  # F12开始/停止录制
-        self.replay_key = keyboard.Key.f11  # F11回放
         self.save_key = keyboard.Key.f10  # 保存录制
 
     def get_current_time(self):
         """获取相对于录制开始的时间"""
         return time.time() - self.start_time if self.start_time else 0
-
-
 
     def on_key_press(self, key):
         """键盘按键按下事件处理"""
@@ -39,10 +36,6 @@ class InputRecorder:
 
         if key == self.toggle_record_key:
             self.toggle_recording()
-            return  # 修改：不返回False，让监听器继续工作
-
-        if key == self.replay_key and not self.recording:
-            self.start_replay()
             return  # 修改：不返回False，让监听器继续工作
 
         if key == self.save_key and not self.recording:
@@ -95,11 +88,6 @@ class InputRecorder:
                 'time': self.get_current_time()
             })
 
-        # 退出程序的快捷键
-        # if key == keyboard.Key.esc and not self.recording and not self.replaying:
-        #     print("程序退出")
-        #     return False  # 只在按ESC退出时才返回False停止监听器
-
     def toggle_recording(self):
         """切换录制状态"""
         if self.recording:
@@ -112,7 +100,7 @@ class InputRecorder:
         self.recording = True
         self.recording_data = []
         self.start_time = time.time()
-        print("开始录制... (按F12停止，按F11回放，按S保存)")
+        print("开始录制... (再次按F12停止，按F10保存录制文件)")
 
     def stop_recording(self):
         """停止录制"""
@@ -126,7 +114,7 @@ class InputRecorder:
             return
         print(os.path.abspath(__file__))
         if not filename:
-            filename = f"{os.path.abspath(__file__).replace("键盘录制.py","")}/recording_{int(time.time())}.json"
+            filename = f"{os.path.abspath(__file__).replace("recorder.py", "")}/../recorder/recording_{int(time.time())}.json"
         final_record = self.transform_data(self.recording_data)
         try:
             with open(filename, 'w') as f:
@@ -135,7 +123,7 @@ class InputRecorder:
         except Exception as e:
             print(f"保存失败: {e}")
 
-    def transform_data(self,datas):
+    def transform_data(self, datas):
         result = []
         last_time = 0
         for data in datas:
@@ -152,8 +140,6 @@ class InputRecorder:
             last_time = curr_time
         return result
 
-
-
     def load_recording(self, filename):
         """从文件加载录制数据"""
         try:
@@ -164,10 +150,10 @@ class InputRecorder:
             return None
 
     def on_f98_press(self, key):
-        if key ==  keyboard.Key.f9:
+        if key == keyboard.Key.f9:
             self.stop_replay = not self.stop_replay
 
-        if key ==  keyboard.Key.f8:
+        if key == keyboard.Key.f8:
             sys.exit(0)
 
     def start_replay(self, filename=None):
@@ -201,10 +187,10 @@ class InputRecorder:
                 print("暂停回放，输出已回放数据：")
                 print(self.recorded_data)
                 while self.stop_replay:
-                   time.sleep(1)
+                    time.sleep(1)
             if stopped == True:
                 print("继续回放，清空已输出得数据：")
-                stopped=False
+                stopped = False
                 self.recorded_data.clear()
 
             # 执行事件
@@ -226,7 +212,6 @@ class InputRecorder:
             self.recorded_data.append(event)
         self.replaying = False
         print("回放结束")
-
 
     def _get_key(self, key_str):
         """将按键字符串转换为pynput识别的按键对象"""
@@ -266,7 +251,6 @@ class InputRecorder:
         """启动监听器"""
         print("输入录制器已启动")
         print("按F12开始/停止录制")
-        print("按F11回放录制")
         print("录制停止时按F10保存录制")
         print("按ESC退出程序")
 
@@ -281,17 +265,16 @@ class InputRecorder:
             print("程序退出")
             self.keyboard_listener.stop()
 
-def transfer_old_json(input,output):
+
+def transfer_old_json(input, output):
     recorder = InputRecorder()
     with open(input, 'r', encoding='utf-8') as file:
         data = json.load(file)
         with open(output, 'w') as f:
             json.dump(recorder.transform_data(data), f, indent=2)
 
+
 if __name__ == "__main__":
-    # transfer_old_json("./哥布林巢穴.json","jl2.json")
     recorder = InputRecorder()
     recorder.start()
     time.sleep(10000)
-
-

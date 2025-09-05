@@ -78,13 +78,14 @@ def _time_out():
             _confirm_time_out_reason()
             return
         if global_config.replay.replaying == False:
-            time.sleep(8)
-            if not checkBoss():
-                print_log("录制结束，但未进入BOSS阶段，强制超时退出")
-                break
-            else:
-                print_log(f"录制结束，成功进入BOSS阶段，退出超时检测线程")
-                return
+            for i in range(5):
+                if not checkBoss():
+                   pass
+                else:
+                    print_log(f"录制结束，成功进入BOSS阶段，退出超时检测线程")
+                    return
+            print_log("录制结束，但未进入BOSS阶段，强制超时退出")
+            break
         time.sleep(1)
     if global_config.global_status == 2 and fb_times == global_config.fb_times:
         curr_time = time.time()

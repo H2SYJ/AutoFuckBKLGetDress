@@ -127,7 +127,6 @@ class InputRecorder:
 
 
 if __name__ == "__main__":
-    # filename = "resource/json/巨塔遗迹.json"
     filename = input("请输入需要回放的json文件的绝对路径\r\n")
     while not os.path.exists(filename):
         filename = input(f"路径：{filename}，不存在，请重新输入\r\n")
