@@ -51,22 +51,6 @@
     "type": "sleep",
     "time": 12.318999999999999
   },
-    {
-    "type": "key_press",
-    "key": "2"
-  },
-  {
-    "type": "sleep",
-    "time": 0.5899999999999999
-  },
-  {
-    "type": "key_press",
-    "key": "2"
-  },
-    {
-    "type": "sleep",
-    "time": 1.5899999999999999
-  },
   {
     "type": "key_press",
     "key": "a"

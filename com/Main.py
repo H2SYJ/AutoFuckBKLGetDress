@@ -17,7 +17,7 @@ def select_target_careers():
     elif target_careers == 2:
         global_config.target_careers = '灵魂乐手'
     elif target_careers == 3:
-        global_config.target_careers = '神盾骑士'
+        global_config.target_careers = '盾'
     elif target_careers == 4:
         global_config.target_careers = '巨刃守护者'
 

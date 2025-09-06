@@ -80,6 +80,7 @@ def _time_out():
         if global_config.replay.replaying == False:
             for i in range(5):
                 if not checkBoss():
+                   time.sleep(1)
                    pass
                 else:
                     print_log(f"录制结束，成功进入BOSS阶段，退出超时检测线程")
