@@ -241,131 +241,7 @@
   },
   {
     "type": "sleep",
-    "time": 2.472999999999999
-  },
-  {
-    "type": "key_press",
-    "key": "d"
-  },
-  {
-    "type": "sleep",
-    "time": 0.11399999999999721
-  },
-  {
-    "type": "key_press",
-    "key": "w"
-  },
-  {
-    "type": "sleep",
-    "time": 1.4010000000000034
-  },
-  {
-    "type": "key_release",
-    "key": "d"
-  },
-  {
-    "type": "sleep",
-    "time": 0.012000000000000455
-  },
-  {
-    "type": "key_release",
-    "key": "w"
-  },
-  {
-    "type": "sleep",
-    "time": 0.8909999999999982
-  },
-  {
-    "type": "key_press",
-    "key": "d"
-  },
-  {
-    "type": "sleep",
-    "time": 0.7269999999999968
-  },
-  {
-    "type": "key_release",
-    "key": "d"
-  },
-  {
-    "type": "sleep",
-    "time": 1.6469999999999985
-  },
-  {
-    "type": "key_press",
-    "key": "w"
-  },
-  {
-    "type": "sleep",
-    "time": 0.1180000000000021
-  },
-  {
-    "type": "key_release",
-    "key": "w"
-  },
-  {
-    "type": "sleep",
-    "time": 0.634999999999998
-  },
-  {
-    "type": "key_press",
-    "key": "w"
-  },
-  {
-    "type": "sleep",
-    "time": 0.7280000000000015
-  },
-  {
-    "type": "key_press",
-    "key": "d"
-  },
-  {
-    "type": "sleep",
-    "time": 0.6099999999999994
-  },
-  {
-    "type": "key_release",
-    "key": "w"
-  },
-  {
-    "type": "sleep",
-    "time": 0.021999999999998465
-  },
-  {
-    "type": "key_release",
-    "key": "d"
-  },
-  {
-    "type": "sleep",
-    "time": 1.3170000000000002
-  },
-  {
-    "type": "key_press",
-    "key": "w"
-  },
-  {
-    "type": "sleep",
-    "time": 0.029000000000003467
-  },
-  {
-    "type": "key_press",
-    "key": "d"
-  },
-  {
-    "type": "sleep",
-    "time": 0.6580000000000013
-  },
-  {
-    "type": "key_release",
-    "key": "w"
-  },
-  {
-    "type": "sleep",
-    "time": 0.009000000000000341
-  },
-  {
-    "type": "key_release",
-    "key": "d"
+    "time": 0.03999999999999915
   },
   {
     "type": "sleep",
@@ -377,23 +253,15 @@
   },
   {
     "type": "sleep",
-    "time": 4.076999999999998
-  },
-  {
-    "type": "key_press",
-    "key": "Key.shift"
-  },
-  {
-    "type": "sleep",
-    "time": 5.114000000000004
+    "time": 11.1880202293396
   },
   {
     "type": "key_release",
-    "key": "Key.shift"
+    "key": "s"
   },
   {
     "type": "sleep",
-    "time": 0.02400000000000091
+    "time": 0.06704068183898926
   },
   {
     "type": "key_press",
@@ -401,31 +269,7 @@
   },
   {
     "type": "sleep",
-    "time": 0.031999999999996476
-  },
-  {
-    "type": "key_release",
-    "key": "s"
-  },
-  {
-    "type": "sleep",
-    "time": 0.6989999999999981
-  },
-  {
-    "type": "key_press",
-    "key": "s"
-  },
-  {
-    "type": "sleep",
-    "time": 1.132000000000005
-  },
-  {
-    "type": "key_release",
-    "key": "s"
-  },
-  {
-    "type": "sleep",
-    "time": 0.0030000000000001137
+    "time": 0.543425416946411
   },
   {
     "type": "key_release",
@@ -433,7 +277,7 @@
   },
   {
     "type": "sleep",
-    "time": 1.3589999999999947
+    "time": 0.143425416946411
   },
   {
     "type": "key_press",
@@ -673,7 +517,7 @@
   },
   {
     "type": "sleep",
-    "time": 2.486000000000004
+    "time": 1.486000000000004
   },
   {
     "type": "key_press",
@@ -689,7 +533,7 @@
   },
   {
     "type": "sleep",
-    "time": 4.266999999999996
+    "time": 1.266999999999996
   },
   {
     "type": "key_press",
@@ -853,54 +697,6 @@
   },
   {
     "type": "key_press",
-    "key": "a"
-  },
-  {
-    "type": "sleep",
-    "time": 1.429000000000002
-  },
-  {
-    "type": "key_release",
-    "key": "a"
-  },
-  {
-    "type": "sleep",
-    "time": 2.134999999999991
-  },
-  {
-    "type": "key_press",
-    "key": "f"
-  },
-  {
-    "type": "sleep",
-    "time": 0.11299999999999955
-  },
-  {
-    "type": "key_release",
-    "key": "f"
-  },
-  {
-    "type": "sleep",
-    "time": 0.6759999999999877
-  },
-  {
-    "type": "key_press",
-    "key": "d"
-  },
-  {
-    "type": "sleep",
-    "time": 1.671999999999997
-  },
-  {
-    "type": "key_release",
-    "key": "d"
-  },
-  {
-    "type": "sleep",
-    "time": 0.86099999999999
-  },
-  {
-    "type": "key_press",
     "key": "s"
   },
   {
@@ -1009,7 +805,7 @@
   },
   {
     "type": "sleep",
-    "time": 2.350999999999999
+    "time": 1.350999999999999
   },
   {
     "type": "key_release",
@@ -1145,15 +941,7 @@
   },
   {
     "type": "sleep",
-    "time": 5.38900000000001
-  },
-  {
-    "type": "key_press",
-    "key": "Key.shift"
-  },
-  {
-    "type": "sleep",
-    "time": 1.5949999999999989
+    "time": 7.0
   },
   {
     "type": "key_release",
@@ -1161,47 +949,7 @@
   },
   {
     "type": "sleep",
-    "time": 0.003999999999990678
-  },
-  {
-    "type": "key_release",
-    "key": "Key.shift"
-  },
-  {
-    "type": "sleep",
-    "time": 0.47999999999998977
-  },
-  {
-    "type": "key_press",
-    "key": "s"
-  },
-  {
-    "type": "sleep",
-    "time": 0.15100000000001046
-  },
-  {
-    "type": "key_press",
-    "key": "Key.shift"
-  },
-  {
-    "type": "sleep",
-    "time": 1.6310000000000002
-  },
-  {
-    "type": "key_release",
-    "key": "s"
-  },
-  {
-    "type": "sleep",
-    "time": 0.015999999999991132
-  },
-  {
-    "type": "key_release",
-    "key": "Key.shift"
-  },
-  {
-    "type": "sleep",
-    "time": 0.9699999999999989
+    "time": 0.2
   },
   {
     "type": "key_press",
@@ -1865,15 +1613,11 @@
   },
   {
     "type": "sleep",
-    "time": 8.816000000000003
+    "time": 3.816000000000003
   },
   {
     "type": "key_release",
     "key": "s"
-  },
-  {
-    "type": "sleep",
-    "time": 0.30000000000001137
   },
   {
     "type": "key_press",
@@ -1881,31 +1625,39 @@
   },
   {
     "type": "sleep",
-    "time": 6.056999999999988
-  },
-  {
-    "type": "key_release",
-    "key": "w"
-  },
-  {
-    "type": "sleep",
-    "time": 0.695999999999998
+    "time": 1.016000000000003
   },
   {
     "type": "key_press",
-    "key": "s"
+    "key": "q"
   },
   {
     "type": "sleep",
-    "time": 8.956999999999994
+    "time": 0.516000000000003
   },
   {
     "type": "key_release",
-    "key": "s"
+    "key": "q"
   },
   {
     "type": "sleep",
-    "time": 0.2810000000000059
+    "time": 0.816000000000003
+  },
+  {
+    "type": "mouse_click",
+    "time": 0.5
+  },
+  {
+    "type": "sleep",
+    "time": 1.816000000000003
+  },
+  {
+    "type": "key_release",
+    "key": "w"
+  },
+  {
+    "type": "sleep",
+    "time": 3.816000000000003
   },
   {
     "type": "key_press",
@@ -1913,14 +1665,15 @@
   },
   {
     "type": "sleep",
-    "time": 7.685000000000002
+    "time": 2.056999999999988
   },
   {
     "type": "key_release",
     "key": "w"
-  },{
+  },
+  {
     "type": "sleep",
-    "time": 1.015326976776123
+    "time": 3.015326976776123
   },
   {
     "type": "key_press",
@@ -2352,7 +2105,7 @@
   },
   {
     "type": "sleep",
-    "time": 3.248112440109253
+    "time": 0.5
   },
   {
     "type": "key_press",
@@ -2360,23 +2113,55 @@
   },
   {
     "type": "sleep",
-    "time": 3.160000000000025
+    "time": 1.0
   },
   {
     "type": "key_release",
     "key": "w"
   },
-   {
+  {
     "type": "sleep",
-    "time": 2.160000000000025
+    "time": 0.1
   },
-   {
+  {
+    "type": "key_press",
+    "key": "w"
+  },
+  {
+    "type": "sleep",
+    "time": 1.0
+  },
+  {
+    "type": "key_release",
+    "key": "w"
+  },
+  {
+    "type": "sleep",
+    "time": 0.1
+  },
+  {
+    "type": "key_press",
+    "key": "w"
+  },
+  {
+    "type": "sleep",
+    "time": 1.0
+  },
+  {
+    "type": "key_release",
+    "key": "w"
+  },
+  {
+    "type": "sleep",
+    "time": 0.5
+  },
+  {
     "type": "key_press",
     "key": "f"
   },
   {
     "type": "sleep",
-    "time": 4.160000000000025
+    "time": 3.0
   },
   {
     "type": "key_release",
@@ -2384,7 +2169,7 @@
   },
   {
     "type": "sleep",
-    "time": 1.160000000000025
+    "time": 0.5
   },
   {
     "type": "key_press",

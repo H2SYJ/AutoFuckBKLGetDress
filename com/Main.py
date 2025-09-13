@@ -26,7 +26,7 @@ def select_red_careers():
     if origin_careers == 1:
         global_config.red_careers = '雷影剑士'
     elif origin_careers == 2:
-        global_config.red_careers = '青岚骑士'
+        global_config.red_careers = '青'
     elif origin_careers == 3:
         global_config.red_careers = '神射手'
     elif origin_careers == 4:

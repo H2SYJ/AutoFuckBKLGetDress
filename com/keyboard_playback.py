@@ -4,6 +4,7 @@ import time
 from threading import Thread
 
 from pynput import keyboard
+from pynput.mouse import Controller, Button
 
 json_file_name = 'recording_1755429068.json'
 class InputRecorder:
@@ -44,6 +45,8 @@ class InputRecorder:
     def _replay(self, data):
         """实际执行回放的方法"""
         keyboard_controller = keyboard.Controller()
+        mouse = Controller()
+
         for event in data:
             if not self.replaying:
                 print("中断回放...")
@@ -60,6 +63,10 @@ class InputRecorder:
                     key = self._get_key(event['key'])
                     if key:
                         keyboard_controller.release(key)
+                elif event['type'] == 'mouse_click':
+                    mouse.press(Button.left)  # 按下左键
+                    time.sleep(event['time'])  # 短暂延迟，模拟实际点击时长
+                    mouse.release(Button.left)  # 释放左键
                 elif event['type'] == 'sleep':
                     time.sleep(event['time'])
 
