@@ -64,9 +64,20 @@ class InputRecorder:
                     if key:
                         keyboard_controller.release(key)
                 elif event['type'] == 'mouse_click':
-                    mouse.press(Button.left)  # 按下左键
+                    event_key = event['key']
+                    button = Button.left
+                    if event_key == 'x1':
+                        button = Button.x1
+                    elif event_key == 'x2':
+                        button = Button.x2
+                    elif event_key == 'right':
+                        button = Button.right
+                    elif event_key == 'left':
+                        button = Button.left
+                    print(f"按下鼠标按键：{button}")
+                    mouse.press(button)
                     time.sleep(event['time'])  # 短暂延迟，模拟实际点击时长
-                    mouse.release(Button.left)  # 释放左键
+                    mouse.release(button)
                 elif event['type'] == 'sleep':
                     time.sleep(event['time'])
 
