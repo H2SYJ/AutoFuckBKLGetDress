@@ -99,9 +99,9 @@ class GameAutomationTool:
         left, top, right, bottom = self.client_rect
         img = self.capture_game_window(sub_left, sub_top, width, height)
         timestamp = time.time()
-        cv2.imwrite(f"{timestamp}.png", img)
+        # cv2.imwrite(f"{timestamp}.png", img)
         result, _ = self.ocr(img)
-        print(f"timestamp: {timestamp}, ocr result: {result}")
+        # print(f"timestamp: {timestamp}, ocr result: {result}")
         arr = []
         if not result:
             return []
@@ -318,33 +318,18 @@ class GameAutomationTool:
     def select_difficulty(self, x, y, w, h):
         move_x = x + w // 2 + 400
         move_y = y + h // 2
+
         pyautogui.moveTo(move_x, move_y)
-
-        results = self.ocr_check(653, 955, 700, 74)
-        print(f"ocr_check results: {results}")
-        while results:
-            idx = 0
-            for result in results:
-                ocr_str, pos = result
-                if "16" in ocr_str:
-                    pyautogui.scroll(-100000)
-                    time.sleep(0.5)
-                    results = self.ocr_check(653, 955, 700, 74)
-                    print(f"ocr_check results: {results}")
-                    break
-                idx += 1
-            if idx + 1 == len(results):
-                break
-
-        while True:
-            game_img = self.capture_game_window()
-            positions = self.find_img(global_config.N6_path, game_img)
-            if positions:
-                print_log(f"找到图片{global_config.N6_path}")
-                self.click_pos(positions)
-                break
-            pyautogui.scroll(-100000)
-            time.sleep(0.5)
+        pyautogui.dragRel(400, 0, 0.3)
+        time.sleep(1)
+        pyautogui.moveTo(move_x, move_y)
+        pyautogui.dragRel(400, 0, 0.3)
+        time.sleep(1)
+        game_img = self.capture_game_window()
+        positions = self.find_img(global_config.N6_path, game_img)
+        if positions:
+            print_log(f"找到图片{global_config.N6_path}")
+            self.click_pos(positions)
         return 0, 0
 
     def stop_monitoring(self):
