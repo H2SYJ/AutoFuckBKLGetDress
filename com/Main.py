@@ -42,27 +42,37 @@ if __name__ == '__main__':
     global_config.automation_tool = automation_tool
     global_config.replay = keyboard_playback.recorder
 
+    difficulty = ""
+    if int(input("选择难度：1.普通 2.N6\r\n")) == 2:
+        difficulty = "N6"
+        global_config.img_info_arr.insert(0, global_config.img_info(global_config.get_image_path("resource/img/master.png"), click_func=None, status_change_to=1,
+             check_when_status=[1, 2]))
+        global_config.img_info_arr.insert(1, global_config.img_info(global_config.get_image_path("resource/img/difficulty.png"), 
+             click_func=lambda x, y, w, h: automation_tool.select_difficulty(x, y, w, h), status_change_to=1,
+             check_when_status=[1, 2]))
+
     num_int = int(input("请输入数字: 1.蒂娜 2.卡尼曼 3.暗影堡垒 4.哥布林巢穴 5.巨龙抓痕 6.巨塔遗迹\r\n"))
+
     if num_int == 1:
-        global_config.script_json = global_config.get_image_path('resource/json/蒂娜.json')
+        global_config.script_json = global_config.get_image_path(f'resource/json/蒂娜{difficulty}.json')
         global_config.fb_time_out_sec = 300
     elif num_int == 2:
-        global_config.script_json = global_config.get_image_path('resource/json/卡尼曼部落.json')
+        global_config.script_json = global_config.get_image_path(f'resource/json/卡尼曼部落{difficulty}.json')
         global_config.fb_time_out_sec = 320
     elif num_int == 3:
-        global_config.script_json = global_config.get_image_path('resource/json/暗影堡垒.json')
+        global_config.script_json = global_config.get_image_path(f'resource/json/暗影堡垒{difficulty}.json')
         select_target_careers()
         if global_config.target_careers:
             select_red_careers()
         global_config.fb_time_out_sec = 500
     elif num_int == 4:
-        global_config.script_json = global_config.get_image_path('resource/json/哥布林巢穴.json')
+        global_config.script_json = global_config.get_image_path(f'resource/json/哥布林巢穴{difficulty}.json')
         global_config.fb_time_out_sec = 360
     elif num_int == 5:
-        global_config.script_json = global_config.get_image_path('resource/json/巨龙抓痕.json')
+        global_config.script_json = global_config.get_image_path(f'resource/json/巨龙抓痕{difficulty}.json')
         global_config.fb_time_out_sec = 600
     elif num_int == 6:
-        global_config.script_json = global_config.get_image_path('resource/json/巨塔遗迹.json')
+        global_config.script_json = global_config.get_image_path(f'resource/json/巨塔遗迹{difficulty}.json')
         global_config.fb_time_out_sec = 540
 
 

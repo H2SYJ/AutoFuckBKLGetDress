@@ -48,6 +48,7 @@ def get_image_path(relative_path):
 
 
 script_json = get_image_path('resource/json/蒂娜.json')
+N6_path = get_image_path('resource/img/N6.png')
 
 
 def print_log(str):
