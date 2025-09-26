@@ -58,7 +58,6 @@ class InputRecorder:
                     key = self._get_key(event['key'])
                     if key:
                         keyboard_controller.press(key)
-
                 elif event['type'] == 'key_release':
                     key = self._get_key(event['key'])
                     if key:
@@ -78,6 +77,8 @@ class InputRecorder:
                     mouse.press(button)
                     time.sleep(event['time'])  # 短暂延迟，模拟实际点击时长
                     mouse.release(button)
+                elif event['type'] == 'mouse_scroll':
+                    mouse.scroll(0, -1)
                 elif event['type'] == 'sleep':
                     time.sleep(event['time'])
 
