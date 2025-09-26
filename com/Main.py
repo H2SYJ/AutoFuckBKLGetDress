@@ -59,8 +59,6 @@ if __name__ == '__main__':
     elif num_int == 2:
         global_config.script_json = global_config.get_image_path(f'resource/json/卡尼曼部落{difficulty}.json')
         global_config.fb_time_out_sec = 320
-        if difficulty == "N6":
-            global_config.img_info_arr.insert(2, global_config.img_info(global_config.get_image_path("resource/img/N6_ka.png"), click_func=None, check_when_status=[2]))
     elif num_int == 3:
         global_config.script_json = global_config.get_image_path(f'resource/json/暗影堡垒{difficulty}.json')
         select_target_careers()
